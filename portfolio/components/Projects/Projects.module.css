@@ -1,0 +1,41 @@
+.projectsContainer {
+  display: flex;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  padding: 10px; /* Add some padding for smaller screens */
+}
+
+
+.title{
+  margin: 50px;
+}
+
+@media (max-width: 1200px) {
+  .projectsContainer {
+    column-gap: 15px; /* Adjust gap for medium screens */
+    row-gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsContainer {
+    column-gap: 10px; /* Further reduce gap for small screens */
+    row-gap: 10px;
+  }
+
+  .swiperContainer{
+    
+  }
+
+}
+
+@media (max-width: 480px) {
+  .projectsContainer > * {
+    flex: 1 1 100%; /* Full width for each card */
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+.profileContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 120px;
+}
+
+.about{
+    font-family: fangsong;
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+}
+
+li{
+    font-size: 20px;
+}
+
+.profileImage{
+    border-radius: 10%;
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    box-shadow: 0 0 10px 5px rgba(82, 78, 78, 0.5);
+}
+
+
+.mySelf{
+    font-size: 50px;
+    font-family: "Brush Script MT", cursive;
+    color:rgb(128, 125, 125);
+    padding:100px;
+    flex-shrink: calc( 100% 20px);
+}
+
+
+@media screen and (max-width: 700px){
+    .profileContainer{
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about{
+        font-size: small;
+        width: max-content;
+    }
+
+    .qualifications{
+        font-size: small;
+        width: max-content;
+    }
+
+    .profileImage{
+        height: 250px;
+        width: 60vw;
+        background-size: contain;
+        border-radius: 50%;
+    }
+
+    .mySelf{
+        font-size: large;
+        width: auto;
+        padding: 10px;
+    }
+}
