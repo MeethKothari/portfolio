@@ -3,8 +3,6 @@ import AppBar from '../components/AppBar/AppBar';
 import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 import Projects from '../components/Projects/Projects';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Swipe from '../components/Swiper/Swiper';
 
 
 function App() {
@@ -12,9 +10,15 @@ function App() {
   return (
     <>
       <AppBar />
-      <About />
-      <Projects/>
-      <Contact/>
+      <div id="about">
+        <About />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </>
   )
 }

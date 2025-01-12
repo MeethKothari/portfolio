@@ -31,7 +31,9 @@
     transform: scale(1.1);
 }
 
-
+.link:hover{
+   color: yellow;
+}
 
 
 .appBarSocials {
@@ -43,6 +45,7 @@
 
 .icons{
     font-size: 1.5rem;
+    color:white;
 }
 .icons:hover {
     cursor: pointer;
@@ -63,20 +66,19 @@
     display: none;
 }
 
-a{
-    color: white;
-}
 
 @media screen and (max-width: 700px){
     .title{
         display: block;
         font-size: 1.5rem;
         text-align: center;
-        margin-top: 0;
+        margin-top: 25px;
     }
 
     .hamburger{
         display: block;
+        position: fixed;
+        top:0;
     }
 
     .appBar {
@@ -87,14 +89,18 @@ a{
         display: flex; /* Show the appBar when toggled on small screens */
         flex-direction: column;
         align-items: flex-start;  
-        background-color: rgba(255, 252, 252, 0.4);
-        color: white;
+        background-color: rgb(255, 255, 255);
+        color: black;
         width: 50%;
         height: 100vh;
         justify-content: flex-start;
         margin-top: 10px;
     }
-
+    
+    .icons{
+        font-size: 1.5rem;
+        color: black;
+    }
     .appBarLinks{
         flex-direction: column;
         gap: 0;
