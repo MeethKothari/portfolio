@@ -53,8 +53,8 @@ li{
     }
 
     .profileImage{
-        height: 250px;
-        width: 60vw;
+        height: 300px;
+        width: 55vw;
         background-size: contain;
         border-radius: 50%;
     }

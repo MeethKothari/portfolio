@@ -147,6 +147,10 @@ const Projects = () => {
             modules={[Autoplay, Pagination, Navigation]}
             className={`${styles.customSwiper}`}
             breakpoints={{
+              300:{
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
               320: {
                 slidesPerView: 1,
                 spaceBetween: 10,
