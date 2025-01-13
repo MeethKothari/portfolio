@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './About.module.css';
 import profileImage from './profile.jpg';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.compat.css"
 
 const About = () => {
   return (
@@ -15,14 +17,18 @@ const About = () => {
         </h2>
         </div>
         <div>
+            <ScrollAnimation animateIn="bounceInRight" animateOut='bounceOutLeft' animateOnce={false}>
             <ul>
             <li className={styles.qualifications}>Building Modern Web Applications</li>
-            <li className={styles.qualifications}>calable Front-End and Back-End Solutions</li>
+            <li className={styles.qualifications}>Scalable Front-End and Back-End Solutions</li>
             <li className={styles.qualifications}>Responsive, User-Friendly Interfaces</li>
             </ul>
+            </ScrollAnimation>
         </div>
     </div>
-    <img src={profileImage} alt="Meeth Kothari" className={styles.profileImage} />
+    <ScrollAnimation animateIn="bounceInRight" animateOut='bounceOutLeft' animateOnce={false}>
+      <img src={profileImage} alt="Meeth Kothari" className={styles.profileImage} />
+    </ScrollAnimation>
     </div>
 
     <p className={styles.mySelf}>

@@ -28,7 +28,7 @@ li{
 .mySelf{
     font-size: 50px;
     font-family: "Brush Script MT", cursive;
-    color:rgb(128, 125, 125);
+    color:rgb(216, 215, 215);
     padding:100px;
     flex-shrink: calc( 100% 20px);
 }
