@@ -126,6 +126,7 @@ const Projects = () => {
   useEffect(() => {
     setProjectData(data);
   }, []);
+  console.log(projectData)
 
   return (
     <div>
