@@ -130,7 +130,7 @@ const Projects = () => {
   return (
     <div>
       <h1 className={styles.title}>Projects:</h1>
-      <h3> Here are some of my projects, more you can get from this </h3>
+      <h2 className={styles.subTitle}> Below are some of my projects, more you can <a href='https://github.com/MeethKothari?tab=repositories' target='_blank'> FIND HERE</a> </h2>
       <div className={styles.projectsContainer}>
         {projectData && (
           <Swiper

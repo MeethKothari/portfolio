@@ -11,7 +11,19 @@
 
 
 .title{
-  margin: 50px;
+  padding: 50px;
+}
+
+
+.subTitle{
+  padding:50px;
+}
+.subTitle a{
+  color: yellow;
+}
+.subTitle a:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 @media (max-width: 1200px) {

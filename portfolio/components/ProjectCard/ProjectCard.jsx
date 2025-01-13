@@ -52,7 +52,7 @@ import styles from './ProjectCard.module.css';
 const ProjectCard = ({item, key}) => {
   return (
   <div>
-    <a href={item.link} target='_blank'>  
+    <a href={item.link} target='_blank' style={{textDecoration: 'none'}}>  
       <Card className={styles.cardContainer}>
         <CardMedia
           sx={{ height: 140}}
@@ -60,7 +60,7 @@ const ProjectCard = ({item, key}) => {
           title={item.link}
           />
         <CardContent className={styles.cardContent}>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" >
           {item.name}
         </Typography>
         <Typography variant="body3" sx={{ color: 'text.primary' }}>
