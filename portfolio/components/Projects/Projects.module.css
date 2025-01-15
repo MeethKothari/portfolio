@@ -11,12 +11,18 @@
 
 
 .title{
+  font-style: italic;
+  font-size: 50px;
+  margin-top: 20px;
   padding: 50px;
 }
 
 
 .subTitle{
-  padding:50px;
+  font-size: 40px;
+  font-style: italic;
+  padding: 0px 50px 50px 50px;
+
 }
 .subTitle a{
   color: yellow;
