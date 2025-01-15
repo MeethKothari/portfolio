@@ -37,6 +37,10 @@
     column-gap: 15px; /* Adjust gap for medium screens */
     row-gap: 15px;
   }
+  .subTitle{
+    font-size: 25px;
+    padding: 20px 50px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -45,15 +49,20 @@
     row-gap: 10px;
   }
 
-  .swiperContainer{
-    
+  .subTitle{
+    font-size: 20px;
+    padding: 20px 50px;
   }
-
 }
 
 @media (max-width: 480px) {
   .projectsContainer > * {
     flex: 1 1 100%; /* Full width for each card */
     max-width: 100%;
+  }
+
+  .subTitle{
+    font-size: 15px;
+    padding: 20px 50px;
   }
 }
