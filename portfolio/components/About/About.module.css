@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 120px;
+    column-gap: 50px;
 }
 
 .about{
@@ -21,13 +22,20 @@ li{
 }
 
 .profileImage{
-    border-radius: 10%;
+    border-radius: 12px;
     width: 300px;
     height: 400px;
     background-size: cover;
-    box-shadow: 0 0 10px 5px rgba(82, 78, 78, 0.5);
-    /* box-shadow: 0 0 5px 5px rgb(121, 113, 4); */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-radius 0.3s ease-in;
 }
+
+.profileImage:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* More depth on hover */
+    border-radius: 50%;
+}
+
 
 
 .mySelf{
@@ -35,8 +43,10 @@ li{
     font-style: italic;
     /* font-family: "Brush Script MT", cursive; */
     color:rgb(241, 237, 237);
-    padding: 100px 50px 100px 50px;
+    padding: 110px 110px 110px 110px;
     flex-shrink: calc( 100% 20px);
+    animation: fade;
+    animation-timeline: view(40% auto);
 }
 
 
@@ -68,6 +78,20 @@ li{
     .mySelf{
         font-size: large;
         width: auto;
-        padding: 10px;
+        padding: 50px;
+    }
+}
+
+
+
+@keyFrames fade{
+    from{
+        opacity: 0;
+        transform: scale(0);
+
+    }
+    to{
+        opacity:1;
+        transform: scale(1);
     }
 }

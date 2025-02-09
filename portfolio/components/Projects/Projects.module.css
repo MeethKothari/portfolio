@@ -14,21 +14,21 @@
   font-style: italic;
   font-size: 50px;
   margin-top: 20px;
-  padding: 50px;
+  padding: 110px 110px 20px 110px;
 }
 
 
 .subTitle{
   font-size: 40px;
   font-style: italic;
-  padding: 0px 50px 50px 50px;
+  padding: 20px 110px 110px 110px;
 
 }
 .subTitle a{
   color: yellow;
 }
 .subTitle a:hover{
-  cursor: pointer;
+  color: green;
   transform: scale(1.1);
 }
 
@@ -41,6 +41,7 @@
     font-size: 25px;
     padding: 20px 50px;
   }
+  
 }
 
 @media (max-width: 768px) {

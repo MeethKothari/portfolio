@@ -1,15 +1,23 @@
 .cardContainer{
     width: auto;
-    height: 300px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
-    overflow: hidden;
-    background-color: #fff; /* Ensure a clean background */
-    position: relative; /* For better control over child positioning */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+    height: 350px;
+    background-color: white;
+    border-radius: 15px; 
     margin: 20px;
-    text-align: center;
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
 }
+
+a{
+    text-decoration: none;
+}
+
+
+.cardContent{
+    padding: 20px;
+}
+
 
 .cardContainer:hover{
    cursor: pointer;
@@ -19,9 +27,6 @@
    transition: 0.5s;
 }
 
-.cardContent{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
 
 
 

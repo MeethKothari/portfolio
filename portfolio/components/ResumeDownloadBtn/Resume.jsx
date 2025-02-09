@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Resume.module.css';
 
 const Resume = () => {
-  const resumeUrl = '/Meeth_Resume_2024.pdf.pdf';
+  const resumeUrl = './Meeth_Resume_2025.pdf';
 
   return (
     <div>

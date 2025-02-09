@@ -1,59 +1,58 @@
-// import React from 'react';
-// import Card from '@mui/material/Card';
-// import CardActions from '@mui/material/CardActions';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Button from '@mui/material/Button';
-// import Typography from '@mui/material/Typography';
+import styles from './ProjectCard.module.css';
+import Swal from 'sweetalert2';
 
-// const ProjectCard = ({data}) => {
-//   return (
-//     <div>
-//     {data.map((item, index) => {
-//       return ( // Return is explicitly used here
-//         <Card sx={{ maxWidth: 345 }} key={index}>
-//           <CardMedia
-//             sx={{ height: 140 }}
-//             image={item.image}
-//             title={item.name}
-//           />
-//           <CardContent>
-//             <Typography gutterBottom variant="h5" component="div">
-//               {item.name} {/* Display the project's name */}
-//             </Typography>
-//             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-//               This is a project description placeholder for {item.name}.
-//             </Typography>
-//           </CardContent>
-//           <CardActions>
-//             <Button size="small">Share</Button>
-//             <Button size="small">Learn More</Button>
-//           </CardActions>
-//         </Card>
-//       );
-//     })}
-//   </div>
-//   );
-// }
+const ProjectCard = ({ item }) => {
+  
+  const handleProjectRedirection = (event, name, link) => {
+    event.preventDefault(); // Prevents immediate redirection
 
-// export default ProjectCard;
+    let alertText = 'Redirecting to project page...';
+
+    if (name === 'Medify (Appointment Booking)') {
+      alertText = 'Data is fetched from database so it may take some time to load....';
+    } else if (name === 'X-Exit (Resignation)') {
+      alertText = 'Use "Admin" as username and password to login for HR, and register and login as any name as username and password to login for EMPLOYEE.';
+    } else if (name === 'ChatBot') {
+      alertText = 'Try to ask some questions like hello, hi, how are you, because I have added static questions and answers.';
+    }
+
+    Swal.fire({
+      title: 'Success!',
+      text: alertText,
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    }).then(() => {
+      window.open(link, '_blank'); // Redirects after clicking "Cool"
+    });
+  };
+
+  return (
+    <a href={item.link} target='_blank' onClick={(event) => handleProjectRedirection(event, item.name, item.link)}>
+      <div className={styles.cardContainer}>
+        <div>
+          <img src={item.image} height={'230px'} width={'100%'} style={{ borderRadius: '15px' }} alt={item.name} />
+          <div className={styles.cardContent}>
+            <p><strong>{item.name}</strong></p>
+            <p>{item.description}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+export default ProjectCard;
 
 
 
-
-
-import React from 'react';
+{/* 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import styles from './ProjectCard.module.css';
-
-const ProjectCard = ({item, key}) => {
-  return (
-  <div>
-    <a href={item.link} target='_blank' style={{textDecoration: 'none'}}>  
-      <Card className={styles.cardContainer}>
+  
+  
+  <Card className={styles.cardContainer}>
         <CardMedia
           sx={{ height: 140}}
           image={item.image}
@@ -67,10 +66,4 @@ const ProjectCard = ({item, key}) => {
           {item.description}
         </Typography>
         </CardContent>
-      </Card>
-    </a>
-  </div>
-  );
-}
-
-export default ProjectCard;
+      </Card> */}

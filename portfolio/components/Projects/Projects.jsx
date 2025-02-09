@@ -119,6 +119,7 @@ import data from '../../data';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { width } from '@mui/system';
 
 const Projects = () => {
   const [projectData, setProjectData] = useState();
@@ -131,7 +132,8 @@ const Projects = () => {
   return (
     <div>
       <h1 className={styles.title}>Projects:</h1>
-      <h2 className={styles.subTitle}> Below are some of my projects, more you can <a href='https://github.com/MeethKothari?tab=repositories' target='_blank'> FIND HERE</a> </h2>
+      <h2 className={styles.subTitle}> Below are some of my projects, more you can  <a href='https://github.com/MeethKothari?tab=repositories' target='_blank'> FIND HERE</a> </h2>
+
       <div className={styles.projectsContainer}>
         {projectData && (
           <Swiper
@@ -143,7 +145,7 @@ const Projects = () => {
               disableOnInteraction: false,
             }}
 
-            navigation={true}
+            navigation={false}
             modules={[Autoplay, Pagination, Navigation]}
             className={`${styles.customSwiper}`}
             breakpoints={{
@@ -159,12 +161,17 @@ const Projects = () => {
                 slidesPerView: 2,
                 spaceBetween: 15,
               },
+
+              700:{
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 20,
               },
               1440: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30,
               },
             }}

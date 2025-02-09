@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './About.module.css';
-import profileImage from './profile.jpg';
+import profileImage from './profile1.jpg';
 import Resume from '../ResumeDownloadBtn/Resume';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css"
